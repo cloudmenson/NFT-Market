@@ -1,14 +1,9 @@
-import { useState } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-
-import { Info, Settings, Resources } from "@/assets";
-import { cn, sidebarNavigation, settingSidebarNavigation } from "@/shared";
+import { sidebarNavigation, settingSidebarNavigation } from "@/shared";
 
 import { NavigationItem } from "./NavigationItem";
 
 export const Navigation = ({ isOpen }: { isOpen: boolean }) => {
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
 
   return (
     <nav className="w-full">

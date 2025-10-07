@@ -1,6 +1,12 @@
 import * as Icon from "@/assets";
 
-export const sidebarNavigation = [
+export type sidebarNavigationProps = {
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  label: string;
+  active?: boolean;
+};
+
+export const sidebarNavigation: sidebarNavigationProps[] = [
   { Icon: Icon.Navigation, label: "Discover", active: true },
   { Icon: Icon.Dashboard, label: "Collections" },
   { Icon: Icon.Circles, label: "Tokens" },
@@ -11,7 +17,7 @@ export const sidebarNavigation = [
   { Icon: Icon.User, label: "Profile" },
 ];
 
-export const settingSidebarNavigation = [
+export const settingSidebarNavigation: sidebarNavigationProps[] = [
   { Icon: Icon.Resources, label: "Resources" },
   { Icon: Icon.Settings, label: "Settings" },
   { Icon: Icon.Info, label: "Support" },

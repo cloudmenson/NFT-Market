@@ -2,8 +2,14 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { cn } from "@/shared";
+import { sidebarNavigationProps } from "@/shared/static/sidebar-navigation";
 
-export const NavigationItem = ({ nav, isOpen }) => {
+type NavigationItemProps = {
+  isOpen: boolean;
+  nav: sidebarNavigationProps;
+};
+
+export const NavigationItem = ({ nav, isOpen }: NavigationItemProps) => {
   return (
     <Link
       href={nav.label}
